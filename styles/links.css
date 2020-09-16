@@ -1,0 +1,31 @@
+/* =======================
+    Navigtion bar
+   ======================= */
+
+   .nav-link{
+    color: white;
+}
+
+a{
+    width: fit-content;
+    padding: .5em 1em;
+    color: wheat;
+    font-size: 2rem;
+    transition: ease-in .25s;
+    text-decoration: none;
+    text-align: center;
+}
+a:hover{
+    transform: translateY(-.5em);
+    box-shadow: 0 .5em 3px 0 #222222;
+    text-decoration: none;
+    color: white;
+}
+a:focus{
+    text-decoration: none;
+    color: greenyellow;
+}
+.footer-social-links a,
+.footer-nav a{
+    padding: 0.12em;
+}

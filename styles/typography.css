@@ -1,0 +1,86 @@
+/* =======================
+    main style-sheet-typography
+   ======================= */
+
+
+p {
+    text-align: justify;
+    font-size : 1rem;
+    color     : silver;
+}
+
+/* Headings */
+.heading {
+    text-align: center;
+    color     : silver;
+}
+
+/* navigation */
+nav a {
+    font-size: 1rem;
+}
+
+/* Banner */
+.banner {
+    color: white;
+}
+
+.banner p {
+    font-size: 3rem;
+}
+
+/* about me */
+.about-me h1,
+.youtube h1,
+.blogger h1,
+.photography h1 {
+    color: white;
+}
+
+.about-me p,
+.youtube p,
+.blogger p,
+.photography p,
+.copy-right p {
+    color: silver;
+}
+
+/* photography */
+.photography-text p a {
+    font-size: 1.12rem;
+}
+
+/* contact */
+.contact h3 {
+    color     : silver;
+    text-align: center;
+}
+
+/* SOCIAL */
+.social {
+    color: honeydew;
+}
+
+/* footer */
+.footer-social-links h1,
+.footer-nav a {
+    font-size: 1.5rem;
+}
+
+
+
+
+/* =======================
+    About me style-sheet-typography
+   ======================= */
+
+.web-certificate-text p a {
+    font-size: 1.12rem;
+}
+
+.shortly p {
+    font-size: 1.5rem;
+}
+.education-achivement{
+    color: wheat;
+}
