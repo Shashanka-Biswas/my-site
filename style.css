@@ -7,34 +7,38 @@
 /* =======================
     heading
    ======================= */
-.heading{
-    margin-top: 8rem ;
+.heading {
+    margin-top   : 8rem;
     margin-bottom: 4rem;
 }
-.heading h1{
-    display: inline;
+
+.heading h1 {
+    display : inline;
     position: relative;
 }
-.heading h1::before{
-    content: "";
-    position: absolute;
-    right: 108%;
-    top: 50%;
-    width: 100%;
-    height: 5px;
+
+.heading h1::before {
+    content   : "";
+    position  : absolute;
+    right     : 108%;
+    top       : 50%;
+    width     : 100%;
+    height    : 5px;
     background: silver;
 }
-.heading h1::after{
-    content: "";
-    position: absolute;
-    left: 108%;
-    bottom: 50%;
-    width: 100%;
-    height: 5px;
+
+.heading h1::after {
+    content   : "";
+    position  : absolute;
+    left      : 108%;
+    bottom    : 50%;
+    width     : 100%;
+    height    : 5px;
     background: silver;
 }
-.copyright-heading{
-    margin: 0;
+
+.copyright-heading {
+    margin : 0;
     padding: 0;
 }
 
@@ -46,8 +50,9 @@ section {
     margin-top   : 4rem;
     margin-bottom: 4rem;
 }
-.copy-right{
-    margin: 0;
+
+.copy-right {
+    margin : 0;
     padding: 0;
 }
 
@@ -55,13 +60,15 @@ section {
     shadows and radius
    ======================= */
 
-.osd {/* outer shadow */
-    box-shadow: 0 0 10px 0px black;
+.osd {
+    /* outer shadow */
+    box-shadow   : 0 0 10px 0px black;
     border-radius: 4px;
 }
 
-.isd {/* inner shadow */
-    box-shadow: inset 0 0 10px 0px black;
+.isd {
+    /* inner shadow */
+    box-shadow   : inset 0 0 10px 0px black;
     border-radius: 4px;
 }
 
@@ -81,7 +88,8 @@ body {
 .nav-link {
     margin: .25em;
 }
-.nav-bar{
+
+.nav-bar {
     background-color: rgba(37, 37, 37, 0.671);
 }
 
@@ -93,9 +101,9 @@ body {
 }
 
 .banner-img {
-    width     : 50%;
-    clip-path : polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
-    margin    : 0;
+    width    : 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+    margin   : 0;
 }
 
 .banner-text {
@@ -116,12 +124,13 @@ body {
 .netlify-form,
 .email-form,
 .web-certificate-text,
-.web-certificate-img{
+.web-certificate-img {
     width  : 48%;
     padding: 0 1.5em;
 }
 
-.netlify-form, .email-form{
+.netlify-form,
+.email-form {
     padding: 1.5em;
 }
 
@@ -133,70 +142,80 @@ body {
 .blogger h1,
 .blogger p,
 .photography h1,
-.photography p{
+.photography p {
     margin: .5em 0;
 }
 
 /* =======================
     MY designed sites ( in carosel)
    ======================= */
-.carousel-inner{
+.carousel-inner {
     padding: 1.5em;
-    margin: 1em;
+    margin : 1em;
 }
-.carousel-item{
-    height:fit-content
+
+.carousel-item {
+    height: fit-content
 }
-.sports{
+
+.sports {
     background: gray;
 }
-.carousel-indicators-holder{
+
+.carousel-indicators-holder {
     position: relative;
-    margin: 1em;
-    padding: 1.5em;
+    margin  : 1em;
+    padding : 1.5em;
 }
 
 /* =======================
     Photography
    ======================= */
-.img-row{
-    display: flex;
+.img-row {
+    display  : flex;
     flex-wrap: wrap-reverse;
-    padding: 0 4px;
+    padding  : 0 4px;
 }
-.img-col{
-    flex: 25%;
+
+.img-col {
+    flex     : 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding  : 0 4px;
 }
-.img-col img{
-    margin-top: 8px;
+
+.img-col img {
+    margin-top    : 8px;
     vertical-align: middle;
-    width: 100%;
-    transition: ease-in .25s;
+    width         : 100%;
+    transition    : ease-in .25s;
 }
-.img-col img:hover{
-    scale: 1.15;
+
+.img-col img:hover {
+    scale     : 1.15;
     box-shadow: 0 0 1.5em 0 black;
 }
-.photography-text{
+
+.photography-text {
     padding: 1em 2em;
-    margin: 2em 0;
+    margin : 2em 0;
 }
 
 /* =======================
     Contact me
    ======================= */
-#text-box-1{
-    height: 19em;
+#text-box-1 {
+    height    : 19em;
     background: honeydew;
 }
-#text-box-2{
-    height: 15em;
+
+#text-box-2 {
+    height    : 15em;
     background: honeydew;
 }
-.submit, .email{
-    height: 3em;
+
+.submit,
+.email {
+    height    : 3em;
     margin-top: .5em;
 }
 
@@ -205,9 +224,89 @@ body {
    ======================= */
 .footer-social-links,
 .footer-nav,
-.footer-form{
+.footer-form {
     width: 30%;
 }
-.footer-form #text-box-1{
+
+.footer-form #text-box-1 {
     height: 10rem;
+}
+
+
+
+
+
+/* =========================================================================
+    Responsive designig 
+   ========================================================================= */
+
+@media screen and (max-width: 1030px) {
+    .banner p {
+        font-size: 2rem;
+    }
+    a{
+        font-size: 1.12rem;
+    }
+    .photography-text p a {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 790px){
+    .banner p{
+        font-size: 1.5rem;
+    }
+    section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner, .social{
+        flex-direction: row;
+    }
+    .social-link-holder a, .social-link-holder h2{
+        font-size: 1rem !important;
+    }
+    section > div{
+        width: 100% !important;
+        margin: 1em auto;
+    }
+
+    /* contact */
+    #text-box-1, #text-box-2{
+        height: 6em;
+    }
+}
+@media screen and (max-width:590px){
+    .banner h1{
+        font-size: 1rem;
+    }
+    .banner p{
+        font-size: 0.8rem;
+    }
+    .heading h1{
+        font-size: 1.2rem;
+    }
+    section h1{
+        font-size: 1.12rem;
+    }
+    .photography-text p a {
+        font-size: 0.8rem;
+    }
+    .social-link-holder a, .social-link-holder h2{
+        font-size: 0.7rem !important;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-social-links a, .footer-nav a{
+        font-size: 1rem !important;
+    }
+    footer > div{
+        width: 100% !important;
+    }
+    .heading{
+        margin: 1.5em auto;
+    }
 }
