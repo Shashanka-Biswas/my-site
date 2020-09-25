@@ -1,0 +1,296 @@
+@import "./style/links.css";
+@import "./style/typography.css";
+
+/* variables */
+:root {
+    --yclr: #ffcb0f;
+    --dclr: #222533;
+    --sclr: #73757e;
+}
+
+/* ================================
+    core elements
+   ================================ */
+.why,
+.service,
+.mwl,
+.reviews {
+    padding: 4em 0;
+}
+
+/* ================================
+    navigatin bars
+   ================================ */
+.top-nav {
+    background-color: var(--yclr);
+    padding: 0.12em 0;
+}
+
+.top-nav-left {
+    width: 50%;
+}
+
+.top-nav-left p {
+    margin      : 0;
+    padding     : 0;
+    margin-right: 1em;
+
+}
+
+.social-link-top {
+    width: 15%;
+}
+
+.nav-bar {
+    background-color: var(--dclr);
+}
+
+/* ================================
+    banner
+   ================================ */
+.banner {
+    background-image : url(./images/banner.png);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    padding          : 3em;
+}
+
+.banner>* {
+    width     : 45%;
+    text-align: center;
+}
+
+/* ================================
+    banner
+   ================================ */
+.wellcome-text {
+    padding: 2em 0;
+}
+
+/* ================================
+    why
+   ================================ */
+.why {
+    background-color: #f2f7fa;
+    padding         : 4em 0;
+}
+
+.why-card-item {
+    width: 20%;
+}
+
+.why-card-item>* {
+    margin: 0.45em 0;
+}
+
+
+/* ================================
+    services
+   ================================ */
+.service-card {
+    width: 30%;
+}
+
+/* ================================
+    make with love
+   ================================ */
+.mwl {
+    background-image : url(./images/mwl.png);
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+.mwl h1 {
+    padding: 0.5em;
+}
+
+.mwl-list {
+    width  : 60%;
+    padding: 2em;
+}
+
+.imgs-holder1,
+.imgs-holder2 {
+    width: 50%;
+}
+
+.imgs-holder2>* {
+    margin: 2px;
+}
+
+.imgs-holder1 {
+    margin: 2px;
+}
+
+.imgs-holder1 img {
+    width: 100%;
+}
+
+.imgs-holder2 img {
+    width : 50%;
+    height: 100%;
+    margin: 2px;
+}
+
+/* ================================
+    REVIEWS
+   ================================ */
+.reviews {
+    background-image : url(./images/rev.png );
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+.reviews-card-item {
+    width     : 30%;
+    transition: ease-in .5s;
+}
+
+.reviews-card-item>* {
+    margin    : 1em 0;
+    transition: ease-in .25s;
+}
+
+.reviews-card-item:hover {
+    scale: 1.1;
+
+}
+
+.reviews-card-item:hover .reviews-text-holder {
+    background-color: var(--yclr);
+    box-shadow      : 0 0 20px 0 rgb(165, 165, 165);
+}
+
+.reviews-card-item:hover .reviews-text-holder p {
+    color: white;
+}
+
+.reviews-text-holder {
+    background-color: #e5e5e5;
+    padding         : 2em 2em 2em 3.5em;
+    position        : relative;
+    border-radius   : 20px;
+}
+
+.reviews-text-holder::after {
+    content   : '';
+    position  : absolute;
+    bottom    : -15px;
+    left      : 45%;
+    height    : 15px;
+    width     : 30px;
+    background: #e5e5e5;
+    clip-path : polygon(0 0, 100% 0, 50% 100%, 0 0);
+}
+
+.reviews-text-holder p {
+    position: relative;
+}
+
+.reviews-text-holder p::before {
+    content  : "\f10d";
+    font-size: 2rem;
+    position : absolute;
+    top      : -0.5em;
+    left     : -0.6em;
+
+}
+
+/* ================================
+    Contact form
+   ================================ */
+.form {
+    background-color: var(--yclr);
+    padding         : 2em;
+}
+
+form>* {
+    margin: 15px 0;
+}
+
+#name,
+#email {
+    width        : 48%;
+    height       : 2.5rem;
+    padding      : 0.12em 1em;
+    border-radius: 8px;
+    box-shadow   : none;
+    border-style : none;
+}
+
+#message {
+    width        : 73%;
+    height       : 2.5rem;
+    padding      : 0.12em 1em;
+    border-radius: 8px;
+    box-shadow   : none;
+    border-style : none;
+}
+
+#submit {
+    width           : 25%;
+    height          : 2.5rem;
+    padding         : 0.12em 1em;
+    border-radius   : 8px;
+    box-shadow      : none;
+    border-style    : none;
+    color           : white;
+    background-color: var(--sclr);
+}
+
+/*  */
+.gbg {
+    background-color: gray;
+    height          : 25px;
+}
+
+/* ================================
+    Footer
+   ================================ */
+footer {
+    background-image : url(./images/footer.png );
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+footer .fas,
+.top-nav .fas {
+    padding-right: 1em;
+}
+
+.fitem {
+    width: 23%;
+}
+
+.fitem h1 {
+    font-size: 2rem;
+    padding  : 2em 0;
+}
+
+.footer-link {
+    width: 100%;
+}
+
+.aug {
+    font-size    : 1rem;
+    padding      : 1em;
+    margin-right : 0.7em;
+    margin-bottom: 1em;
+    width        : 65px;
+    height       : 65px;
+    border-radius: 50%;
+    border       : 3px solid white;
+}
+
+/* ================================
+    copyright
+   ================================ */
+.copyright {
+    background-color: #1a1c27;
+    color           : wheat;
+    padding         : 0.5em;
+}
+
+.copyright span {
+    color: var(--yclr);
+}
