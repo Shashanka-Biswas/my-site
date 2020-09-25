@@ -1,0 +1,61 @@
+:root {
+    --yclr: #ffcb0f;
+    --dclr: #222533;
+}
+
+a {
+    background-color: var(--yclr);
+    color           : white;
+    padding         : 0.5em 0.8em;
+    margin-top      : 1.5em;
+    border-radius   : 5px;
+}
+
+/* ================================
+    navigation
+   ================================ */
+.nav-bar a {
+    color           : white;
+    background-color: transparent;
+    padding         : 0;
+    margin          : 0;
+}
+
+/* ================================
+    banner
+   ================================ */
+.banner a {
+    margin: 2em;
+}
+
+
+/* ================================
+    make with love
+   ================================ */
+.mwl-list a {
+    background-color: transparent;
+    text-decoration : none;
+    color           : white;
+}
+
+.mwl-list a:hover {
+    background-color: black;
+    border-radius   : 20px;
+
+}
+
+/* footer */
+footer a {
+    background-color: transparent;
+    padding         : 0;
+    margin          : 0;
+}
+
+.footer-link a {
+    color: var(--yclr);
+}
+
+.explore-link a {
+    font-style: none;
+    padding   : 1em 0;
+}

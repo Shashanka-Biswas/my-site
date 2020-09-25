@@ -1,0 +1,103 @@
+:root {
+    --yclr: #ffcb0f;
+    --dclr: #222533;
+    --sclr: #73757e;
+}
+
+p {
+    text-align: justify;
+}
+
+h1 {
+    color: white;
+}
+
+/* ================================
+    banner
+   ================================ */
+.banner h1 {
+    font-weight: 900;
+}
+
+.banner h5 {
+    color: rgb(214, 214, 214) !important;
+}
+
+/* ================================
+    wellcome
+   ================================ */
+.wellcome-text h1 {
+    color      : var(--yclr);
+    font-weight: 900;
+    font-size  : 2.12rem;
+}
+
+.wellcome-text h2 {
+    font-weight: 600;
+}
+
+/* ================================
+    why
+   ================================ */
+.why h2 {
+    font-size  : 1.12rem;
+    font-weight: 700;
+}
+
+.why h1,
+.service h1 {
+    color      : black;
+    font-weight: bolder;
+    padding    : 0.5em;
+}
+
+
+
+/* ================================
+    make with love
+   ================================ */
+
+.mwl p {
+    color     : white;
+    text-align: center;
+}
+
+/* ================================
+    review
+   ================================ */
+.reviews h1 {
+    color: black;
+}
+
+.reviews h2 {
+    font-size: 1rem;
+}
+
+/* ================================
+    form
+   ================================ */
+
+.form h2 {
+    color      : var(--sclr);
+    font-weight: bolder;
+}
+
+.form h1 {
+    color: rgb(139, 139, 139);
+
+}
+
+/* footer */
+footer {
+    color: white;
+}
+
+.construction {
+    font-style : italic;
+    font-weight: bolder;
+    color      : var(--yclr);
+}
+
+.footer-link {
+    font-size: 2rem;
+}
