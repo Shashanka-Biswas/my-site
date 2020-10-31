@@ -1,0 +1,134 @@
+/* Others style sheet */
+@import "./style/typography.css";
+@import "./style/links.css";
+@import "./style/ss.css";
+
+/* :root {} */
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+    transition: ease-in 300ms;
+}
+
+body {
+    background: linear-gradient( rgb(133, 133, 133), rgb(61, 61, 61));
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 0 10%;
+}
+
+.navigation{
+    background: linear-gradient(gray,rgb(143, 143, 143),gray);
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin: 0 10px;
+    padding: 0.12em;
+}
+.heading{
+    text-align: center;
+}
+.heading *{
+    padding: 0.12em;
+}
+
+.heading p{
+    writing-mode: inherit;
+}
+
+.grid-holder {
+    margin-top          : 10px;
+    display              : grid;
+    grid-template-columns: repeat(8, 10vw);
+    grid-template-rows   : repeat(8, auto);
+    row-gap              : 5px;
+    column-gap           : 5px;
+    /* justify-items     : center; */
+}
+
+div {
+    background: linear-gradient(45deg,rgb(151, 151, 151), rgb(92, 92, 92));
+    padding         : 1em;
+    box-shadow: 0 0 1px 0 black;
+    background-size: 100%;
+}
+div:hover{
+    transform: scale(1.02);
+    background-size: 200%;
+
+}
+
+.item1 {
+    font-size: 1.12rem;
+    grid-column: 1/ span 8;
+    grid-row   : 1/2;
+}
+
+.item2 {
+    font-size: 1.25rem;
+    grid-area: 2/1/ span 1/ span 4;
+}
+
+.item3 {
+    grid-area: 2/5/ span 2/ span 4;
+}
+
+.item4 {
+    grid-area: 3/1/6/3;
+}
+
+.item5 {
+    grid-area: 3/3/ span 1 / span 2;
+}
+
+.item6 {
+    grid-area: 4/3/ span 1 / span 5;
+}
+
+.item7 {
+    grid-area: 6/1/ span 1 / span 3;
+}
+
+.item8 {
+    grid-area: 5/4/ span 3 / span 2;
+}
+
+.item9 {
+    grid-area: 5 / 6 / span 2 / span 2;
+}
+
+.item10 {
+    grid-area: 7 / 6 /span 1/ span 2;
+}
+
+.item11 {
+    grid-area: 4 / 8 / span 5 / span 1;
+}
+
+.item12 {
+    font-size: 1.25rem;
+    grid-area: 7 / 1 / span 2 / span 2;
+}
+
+.item13 {
+    grid-area: 7 / 3 / span 2 / span 1;
+}
+
+.item14 {
+    font-size: 1.5rem;
+    grid-area: 8/ 4 / span 1 / span 4;
+}
+
+footer{
+    height: 50px;
+    padding: 2em;
+    color: rgb(161, 161, 161);
+}
