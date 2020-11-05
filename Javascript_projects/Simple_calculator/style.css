@@ -1,0 +1,29 @@
+/* Others style sheet */
+@import "./style/typography.css";
+@import "./style/links.css";
+@import "./style/display.css";
+@import "./style/keys.css";
+@import "./style/ss.css";
+/* @import "../../style.css"; */
+
+:root {
+    --clrdisp: rgb(202, 238, 202);
+}
+
+body {
+    background-color: rgb(118, 250, 184);
+}
+
+.cal-body {
+    width        : 400px;
+    padding      : 1em;
+    margin       : 1em;
+    background   : linear-gradient(45deg, rgb(221, 221, 221), white, rgb(221, 221, 221));
+    border-radius: 5px;
+    box-shadow   : 2px 2px 5px 0 silver;
+}
+
+h4{
+    padding: 1em;
+    color: slategray;
+}
