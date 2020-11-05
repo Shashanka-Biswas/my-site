@@ -1,0 +1,8 @@
+div{
+    text-align: justify;
+}
+p{
+    writing-mode: sideways-rl;
+    width: 100%;
+    font-size: 1.12rem;
+}
