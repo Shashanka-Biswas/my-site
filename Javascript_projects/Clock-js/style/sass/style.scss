@@ -1,0 +1,96 @@
+@import "./_shashankastyle";
+
+.digital-clock{
+    width: fit-content;
+    .digital-clock-body{
+        width: 100%;
+        background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+        border: 2px solid gray;
+        padding: 0.12em 0.5em;
+        border-radius: 5px;
+        div{
+            width: 3rem;
+            height: 2rem;
+            background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+            margin: 0.5rem 0.3rem;
+            border-radius: 3px;
+            box-shadow: 0 0 5px 0 black;
+            font-weight: bold;
+            color:  rgb(63, 44, 44);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    }
+    .alarm-body{
+        width: 100%;
+        background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+        border: 2px solid gray;
+        padding: 0.12em 0.5em;
+        border-radius: 5px;
+        .alarm-notifier{
+            font-weight: bolder;
+            border-bottom: 2px solid rgb(194, 194, 194);
+            margin-bottom: 0.12em;
+        }
+        .alarm-input{
+            display: none;
+            label{
+                font-size: 0.6rem;
+                font-weight: bold;
+            }
+            input, select{
+                text-align: center;
+                width: 3.5rem;
+                height: 2rem;
+                background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+                margin: 0.25rem 0;
+                border: none;
+                border-radius: 3px;
+                box-shadow: 0 0 5px 0 black;
+                font-weight: bold;
+                color:  rgb(63, 44, 44);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .ok-button{
+                height: 2rem;
+                background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+                margin: 0.25rem 0;
+                border-radius: 3px;
+                box-shadow: 0 0 5px 0 black;
+                font-weight: bold;
+                color:  rgb(63, 44, 44);
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        }
+        .stop-alarm{
+            display: none;
+            width: 100%;
+            height: 2rem;
+            background:linear-gradient(rgb(189, 189, 189),white,white,white,rgb(190, 190, 190));
+            margin: 0.25rem 0;
+            border-radius: 3px;
+            box-shadow: 0 0 5px 0 black;
+            font-weight: bold;
+            color:  rgb(63, 44, 44);
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./responsive";

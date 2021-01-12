@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <!-- Designed by : Shashanka Biswas
+         Algorithm writer : Shashanka Biswas
+         Coded by : Shashanka Biswas
+         All right reserved to Shashanka Biswas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Cloc</title>
+    <link rel="stylesheet" href="./style/sass/style.css">
+    <script src="./script/script.js" async></script>
+</head>
+
+<body class="center">
+    <audio src="./sound/tink.wav" id="alarm-sound" preload="auto"></audio>
+    <div class="digital-clock">
+        <section class="digital-clock-body around">
+            <div class=" houres center">h</div>
+            <div class=" minuies center">m</div>
+            <div class=" secconds center">s</div>
+            <div class=" ampm center">ampm</div>
+        </section>
+        <section class="alarm-body col-between">
+            <div class="alarm-notifier between w100">
+                <div class="alarm-buttom center">ALARM</div>
+                <div class="alarm-notification between">::</div>
+            </div>
+            <div class="alarm-input w100">
+                <form class=" between w100">
+                    <div class=" col-center ">
+                        <label for="houres">HOURES</label>
+                        <input type="text" id="houres">
+                    </div>
+                    <div class=" col-center ">
+                        <label for="minuies">MINUITES</label>
+                        <input type="text" id="minuies">
+                    </div>
+                    <div class=" col-center ">
+                        <label for="secconds">SECCONDS</label>
+                        <input type="text" id="secconds">
+                    </div>
+                    <div class=" col-center ">
+                        <label for="ampm">am/pm</label>
+                        <select name="ampm" id="ampm">
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="ok-button w100 center">OK</div>
+            </div>
+            <div class="stop-alarm center ">STOP</div>
+        </section>
+    </div>
+
+</body>
+
+</html>
