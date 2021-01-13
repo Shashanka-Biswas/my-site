@@ -1,6 +1,7 @@
 @import "./_shashankastyle";
 
 .digital-clock{
+    margin: auto;
     width: fit-content;
     .digital-clock-body{
         width: 100%;
@@ -90,6 +91,15 @@
 
 
 
+footer{
+    position: fixed;
+    top: 95vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+    color: green;
+    font-weight: bold;
+}
 
 
 

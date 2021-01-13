@@ -62,6 +62,10 @@ okButton.addEventListener('click', () => {
 // Stoping Alarm
 stopAlarm.addEventListener('click', () => {
     alarmOn = false;
+    notification.innerText = '';
+    // setInterval(() => {
+    //     notification.innerText= ": :";
+    // }, 500);
     stopAlarm.style.display = "none";
 })
 
