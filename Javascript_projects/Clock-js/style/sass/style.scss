@@ -1,5 +1,6 @@
 @import "./_shashankastyle";
 
+// Digiral clock
 .digital-clock{
     margin: auto;
     width: fit-content;
@@ -77,6 +78,47 @@
         }
     }
 }
+
+// Analog clock
+.analog-clock{
+    margin: 2em auto;
+    background: radial-gradient(rgb(180, 179, 197),gray);
+    width: 250px;
+    height: 280px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px gray,
+                0 0 0 5px gold,
+                0 0 50px 2px gray;
+    position: relative;
+
+    div{
+        background:radial-gradient(rgb(250, 238, 172),rgb(240, 204, 0));
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: left;
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    #hour-hand{
+        width: 30%;
+        height: 6px;
+    }
+    #minuite-hand{
+        width: 40%;
+        height: 3px;        
+    }
+    #seccond-hand{
+        width: 45%;
+        height: 1px;
+    }
+}
+
+// .alarm-animator
+
+
 
 
 

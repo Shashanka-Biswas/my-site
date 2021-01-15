@@ -4,10 +4,18 @@
 // All right reserved to Shashanka Biswas
 
 // selecting time display divs
+
+// Digital clock divs
 const seccondsDiv = document.querySelector('.secconds');
 const minuiesDiv = document.querySelector('.minuies');
 const houresDiv = document.querySelector('.houres');
 const ampnDiv = document.querySelector('.ampm');
+// Analog clock hands
+const secondHand = document.querySelector('#seccond-hand');
+const minuiteHand = document.querySelector('#minuite-hand');
+const hourHand = document.querySelector('#hour-hand');
+console.log(hourHand);
+
 
 // Alarm setting
 let alarmOn = false;
@@ -87,6 +95,16 @@ function timeD() {
     minuiesDiv.innerText = nowMinuites;
     houresDiv.innerText = nowHoures;
     ampnDiv.innerText = ampm;
+
+    // Analog Clock hand rottetion
+    const secondsDegrees = ((nowSecconds / 60) * 360) -90;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+    const minsDegrees = ((nowMinuites / 60) * 360) + ((nowSecconds/60)*6) - 90;
+    minuiteHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+    const hourDegrees = ((nowHoures / 12) * 360) + ((nowMinuites/60)*30) - 90;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
     //checking alarm and playing sound
     if (nowSecconds == alarmSecconds && nowMinuites == alarmMinuites && nowHoures == alarmHoures && ampm == alarmAmpm) {

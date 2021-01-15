@@ -7,7 +7,7 @@
          All right reserved to Shashanka Biswas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm Cloc</title>
+    <title>Alarm clock</title>
     <link rel="stylesheet" href="./style/sass/style.css">
     <script src="./script/script.js" async></script>
 </head>
@@ -15,6 +15,7 @@
 <body>
     <audio src="./sound/tink.wav" id="alarm-sound" preload="auto"></audio>
     
+    <!-- Digital clock  -->
     <div class="digital-clock">
         <section class="digital-clock-body around">
             <div class=" houres center">h</div>
@@ -53,6 +54,13 @@
             </div>
             <div class="stop-alarm center ">STOP</div>
         </section>
+    </div>
+
+<!-- Analog clock -->
+    <div class="analog-clock">
+        <div class="seccond-hand" id="seccond-hand"></div>
+        <div class="minuite-hand" id="minuite-hand"></div>
+        <div class="houre-hand" id="hour-hand"></div>
     </div>
 
     <footer>Algorithm, Designed and Coded by Shashanka Biswas</footer>
