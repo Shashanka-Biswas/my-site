@@ -14,8 +14,7 @@ const ampnDiv = document.querySelector('.ampm');
 const secondHand = document.querySelector('#seccond-hand');
 const minuiteHand = document.querySelector('#minuite-hand');
 const hourHand = document.querySelector('#hour-hand');
-console.log(hourHand);
-
+const clockTikSound = document.querySelector('#clock-tik-sound');
 
 // Alarm setting
 let alarmOn = false;
@@ -82,6 +81,7 @@ setInterval(timeD, 1000);
 
 function timeD() {
 
+    clockTikSound.play();
     const now = new Date;
     let nowSecconds = now.getSeconds();
     let nowMinuites = now.getMinutes();
