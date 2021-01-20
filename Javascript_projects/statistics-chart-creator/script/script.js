@@ -28,7 +28,16 @@ resetButton.addEventListener("click", () => {
 });
 
 //click event on Add Button
-addButton.addEventListener("click", manupulatingData);
+addButton.addEventListener("click", ()=>{
+  const regNumber = /\D/;
+  console.log(regNumber.test(clientValue.value));  //Checking if the value is number
+  if(regNumber.test(clientValue.value)){
+    alert('Please Enter only Number in the VALUE field');
+  }
+  else{
+    manupulatingData();
+  }
+});
 
 function manupulatingData() {
   itemNumber++; //Adding a list item
@@ -72,7 +81,11 @@ function manupulatingData() {
   itemColor.innerText = `#${randomColor}`;
   itemEditButton.innerText = "EDIT";
   itemDeletButton.innerText = `DELETE`;
+
+  // Colloring
   itemColor.style.backgroundColor = `#${randomColor}`;
+  dataItemDiv.style.background = `radial-gradient(white,#${randomColor}`;
+
   // Pushing title value and color in the item values div
   itemValuesDiv.appendChild(itemTitle);
   itemValuesDiv.appendChild(itemValue);
@@ -101,16 +114,24 @@ function editItem(e) {
   updateButton.innerText = " UPDATE";
   updateButton.onclick = upadte;
 
+  // Catching the existing values
+  const editButtonParent = e.target.parentNode;
+  const title = editButtonParent.previousSibling.querySelector(".title").innerText;
+  const value = editButtonParent.previousSibling.querySelector(".value").innerText;
+  const color = editButtonParent.previousSibling.querySelector(".color").innerText;
   //  creating input for updates
   const titleUpdate = document.createElement("input");
   titleUpdate.type = "text";
   titleUpdate.className = "title";
+  titleUpdate.value = title;
   const valueUpdate = document.createElement("input");
   valueUpdate.type = "text";
   valueUpdate.className = "value";
+  valueUpdate.value = value;
   const colorUpdate = document.createElement("input");
   colorUpdate.type = "color";
   colorUpdate.className = "color";
+  colorUpdate.value = color;
 
   //  pushing update inputs in the item value div
   const eventGrandNode = e.target.parentNode.parentNode;
@@ -126,6 +147,7 @@ function editItem(e) {
 // delet Item
 function deleteItem(e) {
   dataList.removeChild(e.target.parentNode.parentNode);
+  itemNumber = itemNumber - 1;
   upadteChart();
 }
 
@@ -169,6 +191,8 @@ function upadte(e) {
   itemEditButton.innerText = "EDIT";
   itemDeletButton.innerText = `DELETE`;
   itemColor.style.backgroundColor = color;
+  const updateButtonParentParent = updateButtonParent.parentNode;
+  updateButtonParentParent.style.background = `radial-gradient(white,${color})`; // Also changin the color of the item
   // Pushing title value and color in the item values div
   updateButtonParent.previousSibling.innerHTML = "";
   updateButtonParent.previousSibling.appendChild(itemTitle);
@@ -178,7 +202,7 @@ function upadte(e) {
   // Pushing edit and delet buttons in the items buttons div
   updateButtonParent.innerHTML = "";
   console.log(updateButton);
-  console.log(updateButton.parentNode);
+  console.log(updateButtonParent.parentNode);
   updateButtonParent.appendChild(itemEditButton);
   updateButtonParent.appendChild(itemDeletButton);
 
@@ -198,6 +222,7 @@ function upadteChart() {
   const valueArr = [];
   const colorArr = [];
 
+  // Keeping the values in the array
   title.forEach((e) => {
     titleArr.push(e.innerText);
   });
@@ -219,13 +244,14 @@ function upadteChart() {
   for (let i = 0; i < valueArr.length; i++) {
     // as values are kept inside the array
     const barDiv = document.createElement("div");
+    barDiv.style.width = `${100 / (itemNumber + 2)}%`; //Creating the dynamicaly changing bar width
     barDiv.style.height = `${valueInPercentArr[i]}%`;
     barDiv.style.backgroundColor = colorArr[i];
     chart.appendChild(barDiv);
 
     // Creating label item
     const labelItem = document.createElement("div");
-    labelItem.className = 'label-item';
+    labelItem.className = "label-item";
     const labelItemTitle = document.createElement("h5");
     const labelItemColor = document.createElement("div");
     // pushing value in the label
@@ -236,4 +262,23 @@ function upadteChart() {
     labelItem.appendChild(labelItemColor);
     label.appendChild(labelItem);
   }
+}
+
+// dom to html
+// Downloading img=node with the help of "DomToImage" module and saving this with the help of "Filesaver" module
+// The modules are attached in the "index.html" file.
+
+downloadButton.addEventListener("click", downloadChart);
+
+function downloadChart() {
+  const node = document.getElementById("img-node");
+
+  domtoimage
+    .toPng(node)
+    .then(function (ImgDataUrl) {
+      window.saveAs(ImgDataUrl, "Chart.png");
+    })
+    .catch(function (error) {
+      console.error("oops, something went wrong!", error);
+    });
 }
