@@ -1,0 +1,255 @@
+@import "./shashankastyle";
+// variables
+$heading-color : #fdd377;
+$backgroun-gray : #252525;
+
+p{
+    text-align: justify;
+    color: gray;
+}
+a{
+    text-decoration: none;
+
+}
+img{
+    // width: 100%;
+}
+
+// Top navigation bar
+.top-navigation{
+    background: linear-gradient(-45deg,$backgroun-gray,black,black);
+    padding: 0.5em 0.5em;
+    height: 200px;
+    min-width: 500px;
+    img{
+        margin: 0;
+        // width: inherit;
+        height: inherit;
+    }
+    nav{
+        margin-top: 0.5em;
+        ul{
+            margin-left: auto;
+            display: flex;
+            width: fit-content;
+        }
+        a{
+            color:$heading-color;
+            font-size: 0.65rem;
+            margin-left: 1.5em;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 110%;
+                left: 0%;
+                width:0;
+                height: 1px;
+                background-color: red;
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    h1{
+        color: white;
+    }
+    .top-social-links{
+        min-width: 200px;
+        a{
+            color: red;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Special list
+.feature{
+    background: linear-gradient(-45deg,black, black, $backgroun-gray);
+    border: solid 2px ;
+    margin-top: 0.12em;
+    padding: 0.5em 0.25em;
+    a{
+        color: $heading-color;
+        width: 100%;
+        border-right: 1px solid darkslategray;
+        padding: 0 0.5em;
+        font-size: 0.5rem;
+        text-align: center;
+        &:last-child{
+            border: none;
+        }
+        &:hover{
+            color: red;
+        }
+        h1{
+            border-bottom: 1px solid red;
+            width: 50%;
+            margin-bottom: 0.5em;
+            padding: 0.12em;
+        }
+        i{
+            font-size: 2rem;
+        }
+    }
+}
+
+// On work
+.on-work{
+    background: linear-gradient(-45deg,$backgroun-gray,black,black);
+    border: 1px solid red;
+    margin-top: 0.25em;
+    padding: 0.12em 0.5em;
+    div{
+        margin: 0.5em;
+    }
+    h6{
+        text-transform: uppercase;
+        color: red;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.12em;
+        padding-bottom: 0.5em;
+        border-bottom: 0.5px solid red;
+    }
+    h2{
+        color: white;
+        border-bottom: 1px solid gray;
+    }
+    p{
+        margin-top: 0.5em;
+    }
+    .collect{
+        width: 100%;
+        margin-top: 3rem;
+        h5{
+            color: $heading-color;
+            border-bottom: 1px solid gray;
+            padding:0.12em;
+        }
+        a{
+            color: black;
+            padding: 0.5em 2.5em;
+            margin-top: 0.5em;
+            border-radius: 5px;
+            background: linear-gradient(135deg,rgb(218, 123, 0),rgb(205, 241, 2));
+            &:hover{
+                padding: 0.5em 3em;
+            }
+        }
+    }
+}
+
+// Library
+.library{
+    background: linear-gradient($backgroun-gray, black);
+    margin-top: 0.5em;
+    padding: 0.5em;
+    h1{
+        font-size: 0.75rem;
+        color: white;
+        margin-bottom: 0.75em;
+        background: rgba(255, 0, 0, 0.185);
+        width: 100%;
+        text-align: center;
+        padding: 0.12em;
+        border-radius: 5px;
+    }
+    .book-self{
+        width: 100%;
+        padding: 0.5em;
+        a{
+            border: 1px solid red;
+            padding: 0.5em;
+            border-radius: 5px;
+            width: 25%;
+            &:hover{
+                background: rgba(255, 0, 0, 0.26);
+            }
+        }
+        h6{
+            color: green;
+            text-transform: uppercase;
+            width: 100%;
+            padding: 0.5em;
+            border-bottom: 1px solid gray;
+            text-align: center;
+            margin-bottom: 0.5em;
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 0.75rem;
+            padding: 0.12em;
+            margin-top: 0.5em;
+        }
+    }
+}
+
+// Footer
+footer{
+    overflow: hidden;
+    background: linear-gradient(black, #240000);
+    margin-top: 0.5em;
+    h1{
+        color: red;
+        font-size: 1rem;
+        position: relative;
+        padding: 0.5em;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 100%;
+
+            width: 500px;
+            height: 1px;
+            background: linear-gradient(-90deg,red,black);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+
+            width: 500px;
+            height: 1px;
+            background: linear-gradient(90deg,red,black);
+        }
+    }
+    div{
+        width: 25%;
+        a{
+
+            color:#ff0000bb;
+        }
+    }
+    h6{
+        margin-bottom: 0.5em;
+        width: 100%;
+        color: rgb(139, 0, 0);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./responsive";
